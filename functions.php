@@ -23,9 +23,9 @@ function digital_letter_init() {
     ]);
        
    // add_action('init', 'new_post_type');処理がひとまとめなので徳がコメントアウト9/21
-    register_post_type('emergency',[ //portfolioという投稿タイプを追加(英語)
+    register_post_type('new_info',[ //portfolioという投稿タイプを追加(英語)
         "labels" => [
-            "name" => "緊急連絡"//管理画面に表示される名前
+            "name" => "新着情報"//管理画面に表示される名前
         ],
         "public" => true,//公開を許可
         "has_archive" => true,//アーカイブの作成を許可
@@ -49,7 +49,7 @@ function digital_letter_init() {
     //みー追加しました②（9/21）
     register_post_type('roseclass',[ //portfolioという投稿タイプを追加(英語)
         "labels" => [
-            "name" => "ばら組:お知らせ"//管理画面に表示される名前
+            "name" => "ミッキー"//管理画面に表示される名前
         ],
         "public" => true,//公開を許可
         "has_archive" => true,//アーカイブの作成を許可
@@ -60,7 +60,7 @@ function digital_letter_init() {
     ]);
     register_post_type('sakuraclass',[ //portfolioという投稿タイプを追加(英語)
         "labels" => [
-            "name" => "さくら組:お知らせ"//管理画面に表示される名前
+            "name" => "ラビー"//管理画面に表示される名前
         ],
         "public" => true,//公開を許可
         "has_archive" => true,//アーカイブの作成を許可
@@ -71,7 +71,7 @@ function digital_letter_init() {
     ]);
     register_post_type('sunflowerclass',[ //portfolioという投稿タイプを追加(英語)
         "labels" => [
-            "name" => "ひまわり組:お知らせ"//管理画面に表示される名前
+            "name" => "ドナルド"//管理画面に表示される名前
         ],
         "public" => true,//公開を許可
         "has_archive" => true,//アーカイブの作成を許可
@@ -82,7 +82,7 @@ function digital_letter_init() {
     ]);
     register_post_type('lilyclass',[ //portfolioという投稿タイプを追加(英語)
         "labels" => [
-            "name" => "ゆり組:お知らせ"//管理画面に表示される名前
+            "name" => "シープ"//管理画面に表示される名前
         ],
         "public" => true,//公開を許可
         "has_archive" => true,//アーカイブの作成を許可
@@ -93,7 +93,7 @@ function digital_letter_init() {
     ]);
     register_post_type('violetclass',[ //portfolioという投稿タイプを追加(英語)
         "labels" => [
-            "name" => "すみれ組:お知らせ"//管理画面に表示される名前
+            "name" => "バンビ１歳"//管理画面に表示される名前
         ],
         "public" => true,//公開を許可
         "has_archive" => true,//アーカイブの作成を許可
@@ -104,7 +104,7 @@ function digital_letter_init() {
     ]);
     register_post_type('valleyclass',[ //portfolioという投稿タイプを追加(英語)
         "labels" => [
-            "name" => "すずらん組:お知らせ"//管理画面に表示される名前
+            "name" => "バンビ０歳"//管理画面に表示される名前
         ],
         "public" => true,//公開を許可
         "has_archive" => true,//アーカイブの作成を許可

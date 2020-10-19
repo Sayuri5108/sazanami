@@ -14,10 +14,8 @@
     <header>
         <div class="info_he info_img">
             <!-- <img class="header_img" src="<?php// echo get_template_directory_uri(); ?>/img/header5.png" alt=ヘッターの画像> -->
-            <h1 class="head_title">デジタルえんだより</h1><br>
-            <p class="year"><?php the_time('Y年'); ?></p>
-            <p class="month"><?php the_time('n月'); ?>号</p>
-            
+            <h2 class="head_title">さざなみえんだより
+            <br><?php echo current_datetime()->format('y年m月'); ?>号</h2>
         </div>
     </header>
     <?php if(function_exists('pf_show_link')){echo pf_show_link();} ?>
@@ -52,10 +50,10 @@
         <!-- 山口0921ここから -->
             <div class="sec3">
                 <span class="box-title">新着情報</span>
-                <?php $query = new WP_Query( ['post_type' => 'emergency' ,'posts_per_page' => 3 ]); ?>
+                <?php $query = new WP_Query( ['post_type' => 'new_info' ,'posts_per_page' => 3 ]); ?>
                 <?php if($query->have_posts()):?>
                 <?php while($query->have_posts()): $query->the_post(); ?>
-                <p><?php the_field("emergency") ;?></p>
+                <p><?php the_field("new_info") ;?></p>
                 <?php endwhile;?>
                 <?php else:?>
                 <?php endif;?>
@@ -95,7 +93,7 @@
                 <?php $query = new WP_Query( ['post_type' => 'roseclass' ,'posts_per_page' => 1 ]); ?>
                 <?php if($query->have_posts()):?>
                 <?php while($query->have_posts()): $query->the_post(); ?>
-                <h3>ばら組</h3>
+                <h3>ミッキー</h3>
                 <p><?php the_field('rose') ;?></p>
                 <?php endwhile;?>
                 <?php else:?>
@@ -107,7 +105,7 @@
                 <?php $query = new WP_Query( ['post_type' => 'sakuraclass' ,'posts_per_page' => 1 ]); ?>
                 <?php if($query->have_posts()):?>
                 <?php while($query->have_posts()): $query->the_post(); ?>
-                <h3>さくら組</h3>
+                <h3>ラビー</h3>
                 <p><?php the_field('sakura') ;?></p>
                 <?php endwhile;?>
                 <?php else:?>
@@ -119,7 +117,7 @@
                 <?php $query = new WP_Query( ['post_type' => 'sunflowerclass' ,'posts_per_page' => 1 ]); ?>
                 <?php if($query->have_posts()):?>
                 <?php while($query->have_posts()): $query->the_post(); ?>
-                <h3>ひまわり組</h3>
+                <h3>ドナルド</h3>
                 <p><?php the_field('sunflower') ;?></p>
                 <?php endwhile;?>
                 <?php else:?>
@@ -131,7 +129,7 @@
                 <?php $query = new WP_Query( ['post_type' => 'lilyclass' ,'posts_per_page' => 1 ]); ?>
                 <?php if($query->have_posts()):?>
                 <?php while($query->have_posts()): $query->the_post(); ?>
-                <h3>ゆり組</h3>
+                <h3>シープ</h3>
                 <p><?php the_field('lily') ;?></p>
                 <?php endwhile;?>
                 <?php else:?>
@@ -143,7 +141,7 @@
                 <?php $query = new WP_Query( ['post_type' => 'violetclass' ,'posts_per_page' => 1 ]); ?>
                 <?php if($query->have_posts()):?>
                 <?php while($query->have_posts()): $query->the_post(); ?>
-                <h3>すみれ組</h3>
+                <h3>バンビ１歳</h3>
                 <p><?php the_field('violet') ;?></p>
                 <?php endwhile;?>
                 <?php else:?>
@@ -155,7 +153,7 @@
                 <?php $query = new WP_Query( ['post_type' => 'valleyclass' ,'posts_per_page' => 1 ]); ?>
                 <?php if($query->have_posts()):?>
                 <?php while($query->have_posts()): $query->the_post(); ?>
-                <h3>すずらん組</h3>
+                <h3>バンビ０歳</h3>
                 <p><?php the_field('valley') ;?></p>
                 <?php endwhile;?>
                 <?php else:?>
